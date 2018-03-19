@@ -5,7 +5,7 @@
   "author": "Gatien Anizan <gatien.anizan@gmail.com>",
   "license": "CC-BY-NC-4.0",
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --config build/webpack.dev.conf.js",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },

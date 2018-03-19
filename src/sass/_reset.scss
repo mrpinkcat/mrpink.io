@@ -1,0 +1,13 @@
+body {
+  background-color: $white-light;
+  margin: 0;
+  font-family: $font;
+}
+
+button {
+  outline: 0;
+  font-family: $font;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
