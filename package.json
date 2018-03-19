@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A talented developer always starts by making a magnificent website 👨‍💻",
   "author": "Gatien Anizan <gatien.anizan@gmail.com>",
-  "license": "CC-BY-NC-4.0",
+  "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --config build/webpack.dev.conf.js",
     "lint": "eslint --ext .js,.vue src",
