@@ -17,3 +17,12 @@ button {
   cursor: pointer;
   color: $text-dark;
 }
+
+input {
+  font-family: $font;
+  border: none;
+}
+
+p {
+  margin: 0;
+}
