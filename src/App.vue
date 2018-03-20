@@ -2,18 +2,18 @@
   <div id="app">
     <div class="navbar">
       <div class="nav-left">
-        <router-link to="stats" tag='div' class="title">MrPink.io</router-link>
+        <router-link to="/" tag='div' class="title">MrPink.io</router-link>
       </div>
       <div class="nav-right">
-        <router-link to="project" tag='button'>Project</router-link>
-        <router-link to="study" tag='button'>Study</router-link>
-        <router-link to="contact" tag='button'>Contact</router-link>
-        <router-link to="stats" tag='div' class="icon">
+        <router-link to="projects" tag='button'>Projects</router-link>
+        <router-link to="studies" tag='button'>Studies</router-link>
+        <router-link to="contacts" tag='button'>Contacts</router-link>
+        <div class="icon">
           <i class="fab fa-linkedin fa-lg"></i>
-        </router-link>
-        <router-link to="stats" tag='div' class="icon">
+        </div>
+        <div class="icon">
           <i class="fab fa-github-alt fa-lg"></i>
-        </router-link>
+        </div>
       </div>
     </div>
     <router-view/>
@@ -41,7 +41,7 @@ export default {
     height: $nav-height;
     background: $pink;
     border-radius: 6px;
-    color: $text-grey;
+    color: $text-dark;
     transition-duration: .2s;
     .nav-left {
       display: flex;

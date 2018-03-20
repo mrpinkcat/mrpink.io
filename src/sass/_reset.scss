@@ -2,6 +2,7 @@ body {
   background-color: $white-light;
   margin: 0;
   font-family: $font;
+  color: $text-dark;
 }
 
 h1 {
@@ -14,4 +15,5 @@ button {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  color: $text-dark;
 }
