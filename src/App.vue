@@ -90,7 +90,7 @@ export default {
         align-items: center;
         justify-content: center;
         transition-duration: .2s;
-        width: 40px;
+        min-width: 40px;
         color: $text-dark;
         &:hover {
           transform: scale(1.15) rotate(15deg);
@@ -108,8 +108,13 @@ export default {
       flex-direction: column;
       height: auto;
       justify-content: space-around;
+      padding: 0;
       .nav-left {
         height: 50px;
+      }
+      .nav-right {
+        max-width: 95%;
+        overflow-x: auto;
       }
     }
   }
