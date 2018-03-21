@@ -104,6 +104,14 @@ export default {
         }
       }
     }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      height: auto;
+      justify-content: space-around;
+      .nav-left {
+        height: 50px;
+      }
+    }
   }
 }
 </style>
