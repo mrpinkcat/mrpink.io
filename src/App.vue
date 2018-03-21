@@ -2,18 +2,21 @@
   <div id="app">
     <div class="navbar">
       <div class="nav-left">
-        <router-link to="/" tag='div' class="title">MrPink.io</router-link>
+        <router-link to="/" tag='div' class="title">
+          MrPink.io
+          <i class="fas fa-male fa-sm"></i>
+        </router-link>
       </div>
       <div class="nav-right">
         <router-link to="projects" tag='button'>Projects</router-link>
         <router-link to="studies" tag='button'>Studies</router-link>
         <router-link to="contacts" tag='button'>Contacts</router-link>
-        <div class="icon">
+        <a class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
           <i class="fab fa-linkedin fa-lg"></i>
-        </div>
-        <div class="icon">
+        </a>
+        <a class="icon" href="https://github.com/mrpinkcat" target="blank">
           <i class="fab fa-github-alt fa-lg"></i>
-        </div>
+        </a>
       </div>
     </div>
     <router-view/>
@@ -39,7 +42,7 @@ export default {
     margin: 8px;
     padding: 0 35px;
     height: $nav-height;
-    background: $pink;
+    background: #e5e9ea;
     border-radius: 6px;
     color: $text-dark;
     transition-duration: .2s;
@@ -50,6 +53,16 @@ export default {
         font-size: 1.5rem;
         font-weight: 700;
         cursor: pointer;
+        color: $text-pink;
+        svg {
+          margin-left: 10px;
+          transition-duration: .2s;
+        }
+        &:hover {
+          svg {
+            transform: scale(1.75) rotate(15deg);
+          }
+        }
       }
     }
     .nav-right {
@@ -67,7 +80,7 @@ export default {
           color: $text-pink;
         }
         &.router-link-active {
-          font-size: 1.15rem;
+          transform: scale(1.15);
           color: $text-pink;
         }
       }
@@ -81,6 +94,12 @@ export default {
         &:hover {
           transform: scale(1.15) rotate(15deg);
           color: $text-pink;
+        }
+        &:visited {
+          color: $text-dark;
+          &:hover {
+            color: $text-pink;
+          }
         }
       }
     }
