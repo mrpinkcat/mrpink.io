@@ -34,6 +34,7 @@ export default {
 
 #app {
   .navbar {
+    user-select: none;
     $nav-height: 50px;
     display: flex;
     align-items: center;
@@ -63,6 +64,11 @@ export default {
             transform: scale(1.75) rotate(15deg);
           }
         }
+        &.router-link-exact-active {
+          svg {
+            transform: scale(1.75);
+          }
+        }
       }
     }
     .nav-right {
@@ -79,7 +85,7 @@ export default {
           transform: scale(1.15);
           color: $text-pink;
         }
-        &.router-link-active {
+        &.router-link-exact-active {
           transform: scale(1.15);
           color: $text-pink;
         }
@@ -111,10 +117,44 @@ export default {
       padding: 0;
       .nav-left {
         height: 50px;
+        .title {
+          &:hover {
+            svg {
+              transform: none;
+            }
+          }
+          &.router-link-exact-active {
+            svg {
+              transform: scale(1.75) rotate(15deg);
+            }
+          }
+        }
       }
       .nav-right {
         max-width: 95%;
         overflow-x: auto;
+        button {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &.router-link-active {
+            transform: scale(1.15);
+            color: $text-pink;
+          }
+        }
+        .icon {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &:visited {
+            color: $text-dark;
+            &:hover {
+              color: $text-pink;
+            }
+          }
+        }
       }
     }
   }
