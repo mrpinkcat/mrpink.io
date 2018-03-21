@@ -34,6 +34,7 @@ export default {
 
 #app {
   .navbar {
+    user-select: none;
     $nav-height: 50px;
     display: flex;
     align-items: center;
@@ -63,6 +64,11 @@ export default {
             transform: scale(1.75) rotate(15deg);
           }
         }
+        &.router-link-exact-active {
+          svg {
+            transform: scale(1.75);
+          }
+        }
       }
     }
     .nav-right {
@@ -79,7 +85,7 @@ export default {
           transform: scale(1.15);
           color: $text-pink;
         }
-        &.router-link-active {
+        &.router-link-exact-active {
           transform: scale(1.15);
           color: $text-pink;
         }
@@ -90,7 +96,7 @@ export default {
         align-items: center;
         justify-content: center;
         transition-duration: .2s;
-        width: 40px;
+        min-width: 40px;
         color: $text-dark;
         &:hover {
           transform: scale(1.15) rotate(15deg);
@@ -100,6 +106,53 @@ export default {
           color: $text-dark;
           &:hover {
             color: $text-pink;
+          }
+        }
+      }
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      height: auto;
+      justify-content: space-around;
+      padding: 0;
+      .nav-left {
+        height: 50px;
+        .title {
+          &:hover {
+            svg {
+              transform: none;
+            }
+          }
+          &.router-link-exact-active {
+            svg {
+              transform: scale(1.75) rotate(15deg);
+            }
+          }
+        }
+      }
+      .nav-right {
+        max-width: 95%;
+        overflow-x: auto;
+        button {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &.router-link-active {
+            transform: scale(1.15);
+            color: $text-pink;
+          }
+        }
+        .icon {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &:visited {
+            color: $text-dark;
+            &:hover {
+              color: $text-pink;
+            }
           }
         }
       }
