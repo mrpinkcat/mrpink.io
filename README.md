@@ -1,21 +1,26 @@
-# mrpink.io
+# 💎 mrpink.io
 
 > A talented developer always starts by making a magnificent website 👨‍💻
 
-## Build Setup
+## 📦 Setup
 
-``` bash
-# install dependencies
-npm install
+Install using `yarn`:
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```bash
+# Install dependencies
+yarn
+# Run the developemment server
+yarn dev
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Install using `npm`:
+
+```bash
+# Install dependencies
+npm install
+# Run the developemment server
+npm run dev
+```
+
+## 📄 License
+Under MIT license, view the license file for more information.

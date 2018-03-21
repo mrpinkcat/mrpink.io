@@ -1,0 +1,28 @@
+body {
+  background-color: $white-light;
+  margin: 0;
+  font-family: $font;
+  color: $text-dark;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  outline: 0;
+  font-family: $font;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: $text-dark;
+}
+
+input {
+  font-family: $font;
+  border: none;
+}
+
+p {
+  margin: 0;
+}
