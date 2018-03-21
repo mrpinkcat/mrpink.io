@@ -115,6 +115,28 @@ export default {
       .nav-right {
         max-width: 95%;
         overflow-x: auto;
+        button {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &.router-link-active {
+            transform: scale(1.15);
+            color: $text-pink;
+          }
+        }
+        .icon {
+          &:hover {
+            transform: none;
+            color: $text-dark;
+          }
+          &:visited {
+            color: $text-dark;
+            &:hover {
+              color: $text-pink;
+            }
+          }
+        }
       }
     }
   }
