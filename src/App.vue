@@ -91,6 +91,7 @@ export default {
         justify-content: center;
         transition-duration: .2s;
         width: 40px;
+        color: $text-dark;
         &:hover {
           transform: scale(1.15) rotate(15deg);
           color: $text-pink;
