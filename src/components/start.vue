@@ -50,7 +50,7 @@ export default {
   .terminal {
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 120px;
     background: #2c3e50;
     width: 650px;
     height: 450px;

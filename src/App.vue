@@ -118,6 +118,7 @@ export default {
       height: auto;
       justify-content: space-around;
       padding: 0;
+      width: calc(100% - (8px * 2));
       .nav-left {
         height: 50px;
         .title {
