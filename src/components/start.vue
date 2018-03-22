@@ -1,23 +1,18 @@
 <template lang="html">
   <div id="start">
-    <div class="terminal">
-      <div class="head">
-        <div class="buttons">
-          <div class="red"></div>
-          <div class="yellow"></div>
-          <div class="green"></div>
+    <div class="who-is">
+      <h1>Who is Mr. Pink ?</h1>
+      <div class="social-links">
+        <div v-for="link of links"
+          :key="link.name"
+          class="link"
+          v-bind:class="{ 'link-separator' : !link.last }">
+          <a :href="link.link" target="_blank" >{{ link.name }}</a>
         </div>
-        <div class="title">
-          MrPink.io
-        </div>
       </div>
-      <div class="content">
-        <p v-for="log of logs" :key="log" class="command">{{log}}</p>
-      </div>
-      <div class="footer">
-        <p>➜</p>
-        <input v-on:keyup.enter="addLog()" v-model="consoleText">
-      </div>
+    </div>
+    <div class="picture">
+
     </div>
   </div>
 </template>
@@ -26,17 +21,13 @@
 export default {
   data() {
     return {
-      consoleText: undefined,
-      logs: [],
+      links: [
+        { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
+        { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
+        { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
+        { name: 'Twitter', link: 'https://twitter.com/MrPink_AG', last: true },
+      ],
     };
-  },
-  methods: {
-    addLog() {
-      if (this.consoleText) {
-        this.logs.push(this.consoleText);
-        this.consoleText = '';
-      }
-    },
   },
 };
 </script>
@@ -46,79 +37,44 @@ export default {
 
 #start {
   display: flex;
-  justify-content: center;
-  .terminal {
+  padding-top: 50px + (8px * 2);
+  @media (max-width: 576px) {
+    padding-top: 80px + (8px * 2);
+  }
+  margin: 0 8px;
+  .who-is {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-    background: #2c3e50;
-    width: 650px;
-    height: 450px;
-    border-radius: 10px;
-    color: $text-white;
-    .head {
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 40px;
+    @media (max-width: 576px) {
+      margin-top: 10px;
+      padding-left: 0;
+      width: 100%;
+    }
+    h1 {
+      font-weight: normal;
+    }
+    .social-links {
+      margin-top: .5rem;
       display: flex;
-      margin: .75rem;
-      .buttons {
-        display: flex;
-        align-items: center;
-        div {
-          width: 11px;
-          height: 11px;
-          margin-right: 9px;
-          border-radius: 50%;
-          border: 1px solid rgba(0, 0, 0, 0.25);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+      .link {
+        a {
+          display: inline-block;
+          margin: 0 6px;
+          &:visited {
+            color: $text-dark;
+          }
         }
-        .red {
-          background: #ff5f56;
+        &.link-separator {
+          border-right: 2px solid $grey;
         }
-        .yellow {
-          background: #ffbd2e;
-        }
-        .green {
-          background: #28ca41;
-        }
-      }
-      .title {
-        color: $text-white;
-        display: flex;
-        flex-grow: 1;
-        justify-content: center;
       }
     }
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      flex-grow: 1;
-      margin: 0 1rem 1rem 1rem;
-      overflow: hidden;
-      // height: 351px;
-      p {
-        margin: .25rem 0;
-      }
-    }
-    .footer {
-      display: flex;
-      align-items: center;
-      flex-basis: 40px;
-      min-height: 40px;
-      padding: 0 1rem;
-      border-top: 1px solid #354e67;
-      input {
-        flex-grow: 1;
-        padding: 0;
-        margin-left: 5px;
-        caret-color: $text-white;
-        background: transparent;
-        color: $text-white;
-        outline: none;
-        font-size: 1rem;
-      }
-    }
+  }
+  .picture {
+
   }
 }
 </style>
