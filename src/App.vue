@@ -47,6 +47,9 @@ export default {
     border-radius: 6px;
     color: $text-dark;
     transition-duration: .2s;
+    position: fixed;
+    top: 0;
+    width: calc(100% - (8px * 2) - (35px * 2));
     .nav-left {
       display: flex;
       align-items: center;
