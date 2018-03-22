@@ -1,5 +1,8 @@
 <template lang="html">
   <div id="start">
+    <div class="picture">
+      <img src="./../assets/visage.png" alt="">
+    </div>
     <div class="who-is">
       <h1>Who is Mr. Pink ?</h1>
       <div class="social-links">
@@ -10,9 +13,9 @@
           <a :href="link.link" target="_blank" >{{ link.name }}</a>
         </div>
       </div>
-    </div>
-    <div class="picture">
-
+      <div class="content">
+        <p>Hi, my name is Gatien ! I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -37,21 +40,27 @@ export default {
 
 #start {
   display: flex;
+  flex-direction: row-reverse;
   padding-top: 50px + (8px * 2);
-  @media (max-width: 576px) {
+  @media (max-width: $breakpoint-small) {
     padding-top: 80px + (8px * 2);
+  }
+  @media (max-width: $breakpoint-medium) {
+    flex-direction: column;
   }
   margin: 0 8px;
   .who-is {
     display: flex;
+    flex-basis: 60%;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
     padding-left: 40px;
-    @media (max-width: 576px) {
+    @media (max-width: $breakpoint-medium) {
       margin-top: 10px;
       padding-left: 0;
       width: 100%;
+      flex-basis: auto;
     }
     h1 {
       font-weight: normal;
@@ -72,9 +81,25 @@ export default {
         }
       }
     }
+    .content {
+      margin-top: 25px;
+
+    }
   }
   .picture {
-
+    display: inline-flex;
+    justify-content: center;
+    flex-basis: auto;
+    img {
+      transform: scale(.85);
+    }
+    @media (max-width: $breakpoint-medium) {
+      max-width: none;
+      img {
+        height: 250px;
+        transform: none;
+      }
+    }
   }
 }
 </style>
