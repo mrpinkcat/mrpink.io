@@ -113,7 +113,7 @@ $nav-height: 50px;
         }
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: $breakpoint-small) {
       flex-direction: column;
       height: auto;
       justify-content: space-around;
