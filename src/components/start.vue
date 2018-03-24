@@ -14,7 +14,14 @@
         </div>
       </div>
       <div class="content">
-        <p>Hi, my name is Gatien ! I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
+        <p>Hi, my name is Gatien! <br class="mobile-only"><br class="mobile-only">I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
+        <p>I'm curious! And that is what allows me today to offer you this magnificent website! What I also like are the concrete and important things. So I made my list of what is important and concrete about me!</p>
+        <ul>
+          <li>I'm a man</li>
+          <li>I love cats</li>
+          <li>I got a driver's license and a car!</li>
+          <li>I am (future) bachelor 2018</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -38,14 +45,28 @@ export default {
 <style lang="scss">
 @import './../sass/mrpink.io';
 
+.desktop-only {
+  display: block;
+  @include md {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+
 #start {
   display: flex;
   flex-direction: row-reverse;
   padding-top: 50px + (8px * 2);
-  @media (max-width: $breakpoint-small) {
+  @include sm {
     padding-top: 80px + (8px * 2);
   }
-  @media (max-width: $breakpoint-medium) {
+  @include md {
     flex-direction: column;
   }
   margin: 0 8px;
@@ -56,11 +77,14 @@ export default {
     align-items: center;
     margin-top: 40px;
     padding-left: 40px;
-    @media (max-width: $breakpoint-medium) {
+    @include md {
       margin-top: 10px;
       padding-left: 0;
       width: 100%;
       flex-basis: auto;
+      .content {
+        // text-align: justify;
+      }
     }
     h1 {
       font-weight: normal;
@@ -93,12 +117,9 @@ export default {
     img {
       transform: scale(.85);
     }
-    @media (max-width: $breakpoint-medium) {
+    @include md {
       max-width: none;
-      img {
-        height: 250px;
-        transform: none;
-      }
+      display: none;
     }
   }
 }

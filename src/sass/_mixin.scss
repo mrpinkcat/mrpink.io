@@ -1,0 +1,11 @@
+@mixin md {
+  @media (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
