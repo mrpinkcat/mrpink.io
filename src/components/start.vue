@@ -1,22 +1,27 @@
 <template lang="html">
   <div id="start">
-    <div class="terminal">
-      <div class="head">
-        <div class="buttons">
-          <div class="red"></div>
-          <div class="yellow"></div>
-          <div class="green"></div>
-        </div>
-        <div class="title">
-          MrPink.io
+    <div class="picture">
+      <img src="./../assets/visage.png" alt="">
+    </div>
+    <div class="who-is">
+      <h1>Who is Mr. Pink ?</h1>
+      <div class="social-links">
+        <div v-for="link of links"
+          :key="link.name"
+          class="link"
+          v-bind:class="{ 'link-separator' : !link.last }">
+          <a :href="link.link" target="_blank" >{{ link.name }}</a>
         </div>
       </div>
       <div class="content">
-        <p v-for="log of logs" :key="log" class="command">{{log}}</p>
-      </div>
-      <div class="footer">
-        <p>➜</p>
-        <input v-on:keyup.enter="addLog()" v-model="consoleText">
+        <p>Hi, my name is Gatien! <br class="mobile-only"><br class="mobile-only">I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
+        <p>I'm curious! And that is what allows me today to offer you this magnificent website! What I also like are the concrete and important things. So I made my list of what is important and concrete about me!</p>
+        <ul>
+          <li>I'm a man</li>
+          <li>I love cats</li>
+          <li>I got a driver's license and a car!</li>
+          <li>I am (future) bachelor 2018</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -26,17 +31,13 @@
 export default {
   data() {
     return {
-      consoleText: undefined,
-      logs: [],
+      links: [
+        { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
+        { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
+        { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
+        { name: 'Twitter', link: 'https://twitter.com/MrPink_AG', last: true },
+      ],
     };
-  },
-  methods: {
-    addLog() {
-      if (this.consoleText) {
-        this.logs.push(this.consoleText);
-        this.consoleText = '';
-      }
-    },
   },
 };
 </script>
@@ -44,80 +45,81 @@ export default {
 <style lang="scss">
 @import './../sass/mrpink.io';
 
+.desktop-only {
+  display: block;
+  @include md {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+
 #start {
   display: flex;
-  justify-content: center;
-  .terminal {
-    display: flex;
+  flex-direction: row-reverse;
+  padding-top: 50px + (8px * 2);
+  @include sm {
+    padding-top: 80px + (8px * 2);
+  }
+  @include md {
     flex-direction: column;
-    margin-top: 70px;
-    background: #2c3e50;
-    width: 650px;
-    height: 450px;
-    border-radius: 10px;
-    color: $text-white;
-    .head {
-      display: flex;
-      margin: .75rem;
-      .buttons {
-        display: flex;
-        align-items: center;
-        div {
-          width: 11px;
-          height: 11px;
-          margin-right: 9px;
-          border-radius: 50%;
-          border: 1px solid rgba(0, 0, 0, 0.25);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .red {
-          background: #ff5f56;
-        }
-        .yellow {
-          background: #ffbd2e;
-        }
-        .green {
-          background: #28ca41;
-        }
+  }
+  margin: 0 8px;
+  .who-is {
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 40px;
+    @include md {
+      margin-top: 10px;
+      padding-left: 0;
+      width: 100%;
+      flex-basis: auto;
+      .content {
+        // text-align: justify;
       }
-      .title {
-        color: $text-white;
-        display: flex;
-        flex-grow: 1;
-        justify-content: center;
+    }
+    h1 {
+      font-weight: normal;
+    }
+    .social-links {
+      margin-top: .5rem;
+      display: flex;
+      .link {
+        a {
+          display: inline-block;
+          margin: 0 6px;
+          &:visited {
+            color: $text-dark;
+          }
+        }
+        &.link-separator {
+          border-right: 2px solid $grey;
+        }
       }
     }
     .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      flex-grow: 1;
-      margin: 0 1rem 1rem 1rem;
-      overflow: hidden;
-      // height: 351px;
-      p {
-        margin: .25rem 0;
-      }
+      margin-top: 25px;
+
     }
-    .footer {
-      display: flex;
-      align-items: center;
-      flex-basis: 40px;
-      min-height: 40px;
-      padding: 0 1rem;
-      border-top: 1px solid #354e67;
-      input {
-        flex-grow: 1;
-        padding: 0;
-        margin-left: 5px;
-        caret-color: $text-white;
-        background: transparent;
-        color: $text-white;
-        outline: none;
-        font-size: 1rem;
-      }
+  }
+  .picture {
+    display: inline-flex;
+    justify-content: center;
+    flex-basis: auto;
+    img {
+      transform: scale(.85);
+    }
+    @include md {
+      max-width: none;
+      display: none;
     }
   }
 }

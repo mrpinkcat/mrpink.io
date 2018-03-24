@@ -1,7 +1,8 @@
 // Colors
 $white-light: hsl(0, 0%, 98%);
 $pink: #fde5ed;
-$grey: #dedede;
+$grey-light: #dedede;
+$grey: #7f8c8d;
 
 // Font colors
 $text-white: #FFF;
@@ -11,3 +12,7 @@ $text-pink: #ef5777;
 
 // Font
 $font: 'Comfortaa', cursive;
+
+//
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;

@@ -11,10 +11,10 @@
         <router-link to="projects" tag='button'>Projects</router-link>
         <router-link to="studies" tag='button'>Studies</router-link>
         <router-link to="contacts" tag='button'>Contacts</router-link>
-        <a class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
+        <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
           <i class="fab fa-linkedin fa-lg"></i>
         </a>
-        <a class="icon" href="https://github.com/mrpinkcat" target="blank">
+        <a v-if="$route.name != 'Start'" class="icon" href="https://github.com/mrpinkcat" target="blank">
           <i class="fab fa-github-alt fa-lg"></i>
         </a>
       </div>
@@ -32,10 +32,11 @@ export default {
 <style lang="scss">
 @import './sass/mrpink.io';
 
+$nav-height: 50px;
+
 #app {
   .navbar {
     user-select: none;
-    $nav-height: 50px;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -47,6 +48,9 @@ export default {
     border-radius: 6px;
     color: $text-dark;
     transition-duration: .2s;
+    position: fixed;
+    top: 0;
+    width: calc(100% - (8px * 2) - (35px * 2));
     .nav-left {
       display: flex;
       align-items: center;
@@ -75,7 +79,7 @@ export default {
       display: flex;
       align-items: center;
       button {
-        height: $nav-height;
+        height: $nav-height - 20px;
         font-weight: 700;
         padding: 0 10px;
         font-family: $font;
@@ -91,13 +95,12 @@ export default {
         }
       }
       .icon {
-        height: $nav-height;
+        height: $nav-height - 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition-duration: .2s;
         min-width: 40px;
-        color: $text-dark;
         &:hover {
           transform: scale(1.15) rotate(15deg);
           color: $text-pink;
@@ -110,11 +113,12 @@ export default {
         }
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: $breakpoint-small) {
       flex-direction: column;
       height: auto;
       justify-content: space-around;
       padding: 0;
+      width: calc(100% - (8px * 2));
       .nav-left {
         height: 50px;
         .title {
