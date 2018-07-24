@@ -1,26 +1,21 @@
-# 💎 mrpink.io
+# mrpink.io
 
-> A talented developer always starts by making a magnificent website 👨‍💻
-
-## 📦 Setup
-
-Install using `yarn`:
-
-```bash
-# Install dependencies
-yarn
-# Run the developemment server
-yarn dev
+## Project setup
+```
+yarn install
 ```
 
-Install using `npm`:
-
-```bash
-# Install dependencies
-npm install
-# Run the developemment server
-npm run dev
+### Compiles and hot-reloads for development
+```
+yarn run serve
 ```
 
-## 📄 License
-Under MIT license, view the license file for more information.
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```

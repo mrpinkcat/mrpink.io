@@ -1,8 +1,8 @@
 <template lang="html">
   <div id="start">
-    <div class="picture">
+    <!-- <div class="picture">
       <img src="./../assets/visage.png" alt="">
-    </div>
+    </div> -->
     <div class="who-is">
       <h1>Who is Mr. Pink ?</h1>
       <div class="social-links">
@@ -27,19 +27,18 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      links: [
-        { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
-        { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
-        { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
-        { name: 'Twitter', link: 'https://twitter.com/MrPink_AG', last: true },
-      ],
-    };
-  },
-};
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Start extends Vue {
+  @Prop() links!: any[] = [
+    { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
+    { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
+    // { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
+    { name: 'Twitter', link: 'https://twitter.com/MrPink_AG', last: true },
+  ];
+}
 </script>
 
 <style lang="scss">
@@ -61,29 +60,24 @@ export default {
 
 #start {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
   padding-top: 50px + (8px * 2);
   @include sm {
     padding-top: 80px + (8px * 2);
   }
-  @include md {
-    flex-direction: column;
-  }
   margin: 0 8px;
   .who-is {
+    width: 65%;
     display: flex;
-    flex-basis: 60%;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    padding-left: 40px;
     @include md {
       margin-top: 10px;
-      padding-left: 0;
       width: 100%;
       flex-basis: auto;
       .content {
-        // text-align: justify;
+        text-align: justify;
       }
     }
     h1 {
@@ -108,18 +102,6 @@ export default {
     .content {
       margin-top: 25px;
 
-    }
-  }
-  .picture {
-    display: inline-flex;
-    justify-content: center;
-    flex-basis: auto;
-    img {
-      transform: scale(.85);
-    }
-    @include md {
-      max-width: none;
-      display: none;
     }
   }
 }
