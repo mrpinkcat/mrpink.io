@@ -32,7 +32,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Start extends Vue {
-  @Prop() links!: any[] = [
+  @Prop() links: any[] = [
     { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
     { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
     // { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
