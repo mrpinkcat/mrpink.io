@@ -8,8 +8,9 @@
         </router-link>
       </div>
       <div class="nav-right">
+        <router-link to="jobs" tag='button'>Jobs</router-link>
         <router-link to="projects" tag='button'>Projects</router-link>
-        <router-link to="studies" tag='button'>Studies</router-link>
+        <router-link to="diplomas" tag='button'>Diplomas</router-link>
         <router-link to="contacts" tag='button'>Contacts</router-link>
         <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
           <i class="fab fa-linkedin fa-lg"></i>
