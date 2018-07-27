@@ -4,24 +4,15 @@
       <img src="./../assets/visage.png" alt="">
     </div> -->
     <div class="who-is">
-      <h1>Who is Mr. Pink ?</h1>
-      <div class="social-links">
-        <div v-for="link of links"
-          :key="link.name"
-          class="link"
-          v-bind:class="{ 'link-separator' : !link.last }">
-          <a :href="link.link" target="_blank" >{{ link.name }}</a>
-        </div>
-      </div>
+      <h1>Who is <span class="mrpink">Mr. Pink</span> ?</h1>
+      <img src="./../assets/me.jpg" alt="A pic of me :)" height="200px">
+      <small>Yeah that's realy me :)</small>
       <div class="content">
-        <p>Hi, my name is Gatien! <br class="mobile-only"><br class="mobile-only">I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
-        <p>I'm curious! And that is what allows me today to offer you this magnificent website! What I also like are the concrete and important things. So I made my list of what is important and concrete about me!</p>
-        <ul>
-          <li>I'm a man</li>
-          <li>I love cats</li>
-          <li>I got a driver's license and a car!</li>
-          <li>I am (future) bachelor 2018</li>
-        </ul>
+        <h3>Hi, my name is Gatien!</h3>
+        <p>I like new technologies and having a good time with friends. My passion is divided between my love for technology and my thirst for creativity.</p>
+        <p>My favorite time pass is coding, playing video games and getting lost on Reddit. I know Javascript, Typescipt, Pyhton, Swift, mongodb, nodejs and more, but my favorite environement is the Javascript. When i play video games i love playing to Factorio, Hacknet, Battlefield or League of Legend with my friends.</p>
+        <p>In 2014 I learned to code. I preferred coding rather than learning my classes, that's why today I got my BAC (with honors) with a two years delay.</p>
+        <p>Since that day I've been learning new technologies. Actualy i'm on <b>vue.js</b>, i love this framework. It's much more intuitive than Angular (for example), and the coding team is mutch more dovted to the task and that see! This website is coding on vue.js with vue-ui and Typescipt.</p>
       </div>
     </div>
   </div>
@@ -31,14 +22,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Start extends Vue {
-  @Prop() public links: any[] = [
-    { name: 'LinkedIn', link: 'https://www.linkedin.com/in/anizan-g/' },
-    { name: 'GitHub', link: 'https://github.com/mrpinkcat' },
-    // { name: 'Facebook', link: 'https://www.facebook.com/gatien.anizan' },
-    { name: 'Twitter', link: 'https://twitter.com/MrPink_AG', last: true },
-  ];
-}
+export default class Start extends Vue {}
 </script>
 
 <style lang="scss">
@@ -80,28 +64,17 @@ export default class Start extends Vue {
         text-align: justify;
       }
     }
+    .mrpink {
+      color: $text-pink;
+    }
+    p {
+      margin-top: 10px;
+    }
+    small {
+      padding-top: 5px;
+    }
     h1 {
       font-weight: normal;
-    }
-    .social-links {
-      margin-top: .5rem;
-      display: flex;
-      .link {
-        a {
-          display: inline-block;
-          margin: 0 6px;
-          &:visited {
-            color: $text-dark;
-          }
-        }
-        &.link-separator {
-          border-right: 2px solid $grey;
-        }
-      }
-    }
-    .content {
-      margin-top: 25px;
-
     }
   }
 }
