@@ -8,11 +8,14 @@
   </div>
   <div class="nav-right">
     <router-link v-for='link in navInfo.routerLinksNav' :key='link.path' :to='link.path' tag='button'>{{link.displayName}}</router-link>
-    <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
+    <!-- <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
       <i class="fab fa-linkedin fa-lg"></i>
     </a>
     <a v-if="$route.name != 'Start'" class="icon" href="https://github.com/mrpinkcat" target="blank">
       <i class="fab fa-github-alt fa-lg"></i>
+    </a> -->
+    <a v-for='link in navInfo.routerLinksExt' :key='link.url' class="icon" :href='link.url' target="blank">
+      <i class="fab fa-lg" :class='link.icon'></i>
     </a>
   </div>
 </div> 

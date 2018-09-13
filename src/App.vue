@@ -34,6 +34,20 @@ export default class Main extends Vue {
         path : 'contacts',
       },
     ],
+    routerLinksExt : [
+      {
+        icon : 'fa-linkedin',
+        url : 'https://www.linkedin.com/in/anizan-g/',
+      },
+      {
+        icon : 'fa-github-alt',
+        url : 'https://github.com/mrpinkcat',
+      },
+      {
+        icon : 'fa-instagram',
+        url : 'https://www.instagram.com/gatien.anizan/',
+      },
+    ],
   };
 }
 </script>
