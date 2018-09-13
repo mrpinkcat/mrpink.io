@@ -27,8 +27,14 @@ p {
   margin: 0;
 }
 
-a {
+a.link {
   color: $text-dark;
+  transition: 150ms;
+}
+
+a.link:hover {
+  color: $text-pink;
+  transition: 150ms;
 }
 
 small {
