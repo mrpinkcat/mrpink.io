@@ -7,15 +7,15 @@
     </router-link>
   </div>
   <div class="nav-right">
-    <router-link to="jobs" tag='button'>Jobs</router-link>
-    <router-link to="projects" tag='button'>Projects</router-link>
-    <router-link to="diplomas" tag='button'>Diplomas</router-link>
-    <router-link to="contacts" tag='button'>Contacts</router-link>
-    <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
+    <router-link v-for='link in navInfo.routerLinksNav' :key='link.path' :to='link.path' tag='button'>{{link.displayName}}</router-link>
+    <!-- <a v-if="$route.name != 'Start'" class="icon" href="https://www.linkedin.com/in/anizan-g/" target="blank">
       <i class="fab fa-linkedin fa-lg"></i>
     </a>
     <a v-if="$route.name != 'Start'" class="icon" href="https://github.com/mrpinkcat" target="blank">
       <i class="fab fa-github-alt fa-lg"></i>
+    </a> -->
+    <a v-for='link in navInfo.routerLinksExt' :key='link.url' class="icon" :href='link.url' target="blank">
+      <i class="fab fa-lg" :class='link.icon'></i>
     </a>
   </div>
 </div> 
@@ -26,7 +26,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Navbar extends Vue {
-  @Prop() private info!: any;
+  @Prop() private navInfo!: any;
 }
 </script>
 
