@@ -1,14 +1,23 @@
 <template lang="html">
 <div id="projects">
- WIP :3
+ <p>{{username}}</p>
 </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Prop, Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Projects extends Vue {}
+export default class Projects extends Vue {
+  // @Prop username: string;
+
+  // mounted() {
+  //   Vue.axios.get('https://api.github.com/users/mrpinkcat').then(res => {
+  //     console.log(res.data);
+  //     this.username = res.data.login;
+  //   })
+  // };
+}
 </script>
 
 <style lang="scss">
