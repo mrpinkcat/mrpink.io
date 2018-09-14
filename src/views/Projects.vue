@@ -1,27 +1,32 @@
-<template lang="html">
+<template>
 <div id="projects">
- <p>{{username}}</p>
+  <p>{{username}} repos :</p>
+  <ul>
+    <li v-for='repo in repos' :key='repo.id'>{{repo.name}}</li>
+  </ul>
 </div>
 </template>
 
 <script lang="ts">
 import { Prop, Component, Vue } from 'vue-property-decorator';
+import axios from 'axios';
 
 @Component
 export default class Projects extends Vue {
-  // @Prop username: string;
+  @Prop() public username: string = 'mrpinkcat';
+  @Prop() public repos!: any;
 
-  // mounted() {
-  //   Vue.axios.get('https://api.github.com/users/mrpinkcat').then(res => {
-  //     console.log(res.data);
-  //     this.username = res.data.login;
-  //   })
-  // };
+
+  public mounted() {
+    axios.get('https://api.github.com/users/mrpinkcat/repos').then((res) => {
+      this.repos = res.data;
+    });
+  }
 }
 </script>
 
 <style lang="scss">
-@import './../sass/mrpink.io';
+@import "./../sass/mrpink.io";
 
 #projects {
   margin: 0 8px;
