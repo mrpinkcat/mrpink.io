@@ -30,6 +30,7 @@ export default class Projects extends Vue {
             this.repos.push({
               name : repo.name,
               desc : repo.description,
+              url : repo.html_url,
               lastCommit : resCommit.data[0].commit.committer.date,
             });
           });
@@ -37,6 +38,7 @@ export default class Projects extends Vue {
           this.repos.push({
             name : repo.name,
             desc : repo.description,
+              url : repo.html_url,
             lastCommit : undefined,
           });
         }

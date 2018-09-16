@@ -2,7 +2,7 @@
   <div class="project-card">
     <ul>
       <p v-if='!repos'>loading ...</p>
-      <li v-for='repo in repos' :key='repo.id'>{{repo.name}}
+      <li v-for='repo in repos' :key='repo.id'><a :href='repo.url'>{{repo.name}}</a>
         <ul>
           <li>Desc : {{repo.desc}}</li>
           <li v-if='repo.lastCommit'>Last update : {{repo.lastCommit}}</li>
