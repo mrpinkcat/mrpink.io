@@ -95,6 +95,7 @@ $nav-height: 50px;
       }
     }
     .icon {
+      color: $text-dark;
       height: $nav-height - 20px;
       display: flex;
       align-items: center;
