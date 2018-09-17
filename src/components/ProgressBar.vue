@@ -27,7 +27,8 @@ export default class ProgressBar extends Vue {
     background: $text-pink;
     display: inline-flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    color: white;
   }
 }
 

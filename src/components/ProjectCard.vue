@@ -1,6 +1,7 @@
 <template>
   <div class="project-card">
-    <div><a :href='repo.url'>{{repo.name}}</a>
+    <div>
+      <a class="repo-name" :href='repo.url' target="blank">{{repo.name}}</a>
       <ul>
         <li>Desc : {{repo.desc}}</li>
         <li v-if='repo.lastCommit'>Last update : {{repo.lastCommit}}</li>
@@ -27,6 +28,12 @@ export default class ProjectCard extends Vue {
   padding: 1em;
   width: 27%;
   display: inline-flex;
+  border-radius: 6px;
+  .repo-name {
+    color: $text-pink;
+    text-decoration: none;
+    font-size: 1.25em;
+  }
 }
 </style>
 
