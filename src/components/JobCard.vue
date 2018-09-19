@@ -9,7 +9,7 @@
     </div>
     <h3>Activities :</h3>
     <ul class="job-activities">
-      <li v-for='activity in job.activities'>{{activity}}</li>
+      <li v-for='activity in job.activities' :key="activity">{{activity}}</li>
     </ul>
   </div>
 </div>
