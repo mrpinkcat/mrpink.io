@@ -40,14 +40,15 @@ export default class ProjectCard extends Vue {
     color: $text-pink;
     text-decoration: none;
     font-size: 1.25em;
+    font-weight: bold;
   }
   .desc {
-    font-size: 0.80em;
+    font-size: 0.90em;
   }
   .archived, .empty, .last-commit {
     position: absolute;
     right: 1em;
-    font-size: 0.85em;
+    font-size: 0.80em;
   }
   .archived, .empty {
     top: 1em;
@@ -56,6 +57,18 @@ export default class ProjectCard extends Vue {
   }
   .last-commit {
     bottom: 1em;
+    &::before {
+      content: "Last update: ";
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        transition-delay: 0.35s;
+      }
+    }
   }
 }
 </style>
