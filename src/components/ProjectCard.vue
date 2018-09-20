@@ -32,7 +32,7 @@ export default class ProjectCard extends Vue {
   position: relative;
   background: $grey-light;
   margin: 0px 7px 14px 7px;
-  padding: 1em 1em 2em 1em;
+  padding: 1.2em 1em 2em 1em;
   width: 27%;
   display: inline-flex;
   border-radius: 6px;
