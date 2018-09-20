@@ -36,6 +36,8 @@ export default class Navbar extends Vue {
 $nav-height: 50px;
 
 .navbar {
+  box-shadow: rgb(200, 200, 200) 2px 2px 5px;
+  z-index: 1000;
   user-select: none;
   display: flex;
   align-items: center;

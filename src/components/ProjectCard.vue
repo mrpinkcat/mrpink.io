@@ -28,7 +28,7 @@ export default class ProjectCard extends Vue {
 @import '@/sass/mrpink.io.scss';
 
 .project-card {
-  box-shadow: rgb(170, 170, 170) 2px 2px 5px;
+  box-shadow: rgb(200, 200, 200) 2px 2px 5px;
   position: relative;
   background: $grey-light;
   margin: 0px 7px 14px 7px;
@@ -36,6 +36,11 @@ export default class ProjectCard extends Vue {
   width: 27%;
   display: inline-flex;
   border-radius: 6px;
+  @include sm {
+    width: 100%;
+    margin: 0 0 10px 0;
+    // box-shadow: none;
+  }
   .repo-name {
     color: $text-pink;
     text-decoration: none;

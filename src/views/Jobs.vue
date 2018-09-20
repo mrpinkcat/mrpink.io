@@ -74,5 +74,11 @@ export default class Jobs extends Vue {
 <style lang="scss">
 @import './../sass/mrpink.io';
 
-
+#jobs {
+  margin: 0 8px;
+  padding-top: 50px + (8px * 2);
+  @include sm {
+    padding-top: 80px + (8px * 2);
+  }
+}
 </style>

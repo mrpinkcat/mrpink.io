@@ -2,7 +2,7 @@
   <div id="projects">
     <Loading class="loading-comp" v-if='loading' :comment='"Fetching the Github API..."' :status='repos.length' :total='loadingTotal' />
     <div class="project-card-container" v-if='!loading'>
-      <ProjectCard v-for='repo in repos' :key='repo.lastCommit' :repo='repo'/>
+      <ProjectCard v-for='repo in repos' :key='repo.name' :repo='repo'/>
     </div>
   </div>
 </template>
