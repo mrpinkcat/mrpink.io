@@ -2,7 +2,7 @@
   <div id="projects">
     <Loading class="loading-comp" v-if='loading' :comment='"Fetching the Github API..."' :status='repos.length' :total='loadingTotal' />
     <div class="project-card-container" v-if='!loading'>
-      <ProjectCard v-for='repo in repos' :key='repo.lastCommit' :repo='repo'/>
+      <ProjectCard v-for='repo in repos' :key='repo.name' :repo='repo'/>
     </div>
   </div>
 </template>
@@ -30,6 +30,7 @@ export default class Projects extends Vue {
     axios.get('https://api.github.com/users/mrpinkcat/repos').then((res) => {
       // Met a jour le nombre total de repo
       this.loadingTotal = res.data.length;
+
       for (const repo of res.data) {
         // Check si le repo est vide pour éviter une error lors du get du last commit
         if (repo.size > 0) {
@@ -41,7 +42,9 @@ export default class Projects extends Vue {
               url : repo.html_url,
               // Slice the date for let just the date ()
               lastCommit : resCommit.data[0].commit.committer.date.slice(0, 10),
+              archived : repo.archived,
             });
+
             // Check si tous les repos sont chargés pour changer la state de la prop loading
             if (this.repos.length === res.data.length) {
               this.loading = false;
@@ -53,7 +56,9 @@ export default class Projects extends Vue {
             desc : repo.description,
             url : repo.html_url,
             lastCommit : undefined,
+            archived : repo.archived,
           });
+
           // Check si tous les repos sont chargés pour changer la state de la prop loading
           if (this.repos.length === res.data.length) {
             this.loading = false;
