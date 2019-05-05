@@ -2,7 +2,7 @@
 <div class="navbar">
   <div class="nav-left">
     <router-link to="/" tag='div' class="title">
-    MrPink.io
+    MrPink.dev
     <i class="fas fa-male fa-sm"></i>
     </router-link>
   </div>
@@ -31,7 +31,7 @@ export default class Navbar extends Vue {
 </script>
 
 <style lang="scss">
-@import '../sass/mrpink.io';
+@import '../sass/mrpink.dev';
 
 $nav-height: 50px;
 
