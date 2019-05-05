@@ -12,7 +12,7 @@ export default class Diplomas extends Vue {}
 </script>
 
 <style lang="scss">
-@import './../sass/mrpink.io';
+@import './../sass/mrpink.dev';
 
 #diplomas {
   margin: 0 8px;

@@ -23,7 +23,7 @@ export default class JobCard extends Vue {
 </script>
 
 <style lang="scss">
-@import './../sass/mrpink.io';
+@import './../sass/mrpink.dev';
 
 
 .job-card {

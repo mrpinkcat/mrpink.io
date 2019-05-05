@@ -25,7 +25,7 @@ export default class ProjectCard extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/sass/mrpink.io.scss';
+@import '@/sass/mrpink.dev.scss';
 
 .project-card {
   box-shadow: rgb(200, 200, 200) 2px 2px 5px;

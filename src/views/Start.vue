@@ -26,7 +26,7 @@ export default class Start extends Vue {}
 </script>
 
 <style lang="scss">
-@import './../sass/mrpink.io';
+@import './../sass/mrpink.dev';
 
 .desktop-only {
   display: block;

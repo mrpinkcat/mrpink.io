@@ -54,5 +54,5 @@ export default class Main extends Vue {
 
 
 <style lang="scss">
-@import './sass/mrpink.io';
+@import './sass/mrpink.dev';
 </style>

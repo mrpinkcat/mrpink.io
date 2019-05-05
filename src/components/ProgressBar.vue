@@ -15,7 +15,7 @@ export default class ProgressBar extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/sass/mrpink.io.scss';
+@import '@/sass/mrpink.dev.scss';
 
 .progress-bar {
   background: $grey;

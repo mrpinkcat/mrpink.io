@@ -12,7 +12,7 @@ export default class Contacts extends Vue {}
 </script>
 
 <style lang="scss">
-@import './../sass/mrpink.io';
+@import './../sass/mrpink.dev';
 
 #contacts {
   margin: 0 8px;

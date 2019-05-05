@@ -22,7 +22,7 @@ export default class Loading extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/sass/mrpink.io.scss';
+@import '@/sass/mrpink.dev.scss';
 
 .loading {
   width: 300px;
