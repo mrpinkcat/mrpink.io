@@ -1,8 +1,22 @@
-# mrpink.io
-<!--Badges-->
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-<!--End of Badges-->
+# mrpink.dev
 
-This repository contains the source code of [my website](http://mrpink-io.netlify.com).
+> A talented developer always starts by making a magnificent website 👨‍💻
 
-My website is buid with vue.js in Typescript. It allows you to get to know who I am, where I have worked or what degrees I have. It does all this by showing you my ability to create a fluid website, using modern technologies.
+## Build Setup
+
+``` bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
