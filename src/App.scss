@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .text-center {
+    margin: 15px 0;
+    color: #18FF62;
+    text-shadow: 0px 0px 2px rgba(10, 255, 10, .8);
+    text-align: center;
+  }
+}

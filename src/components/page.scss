@@ -1,0 +1,40 @@
+.Home, .Test {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  span {
+    max-width: 100%;
+    white-space: normal;
+    margin: 3px 0;
+  }
+
+  .links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: 2px 10px;
+      color: #18FF62;
+      text-decoration: none;
+      
+      &::before {
+        content: '>';
+        font-weight: 600;
+        padding-right: 10px;
+      }
+      
+      &:hover {
+        background: #18FF62;
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
