@@ -1,5 +1,5 @@
 <template>
-<div class="navbar">
+<div class="navbar top-0">
   <div class="nav-left">
     <router-link to="/" tag='div' class="title">
     MrPink.dev
@@ -36,6 +36,7 @@ export default class Navbar extends Vue {
 $nav-height: 50px;
 
 .navbar {
+  background: #FFF;
   box-shadow: rgb(200, 200, 200) 2px 2px 5px;
   z-index: 1000;
   user-select: none;
@@ -43,16 +44,15 @@ $nav-height: 50px;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin: 8px;
   padding: 0 35px;
   height: $nav-height;
-  background: #e5e9ea;
-  border-radius: 6px;
   color: $text-dark;
   transition-duration: 0.2s;
   position: fixed;
   top: 0;
-  width: calc(100% - (8px * 2) - (35px * 2));
+  width: 100%;
+  box-sizing: border-box;
+
   .nav-left {
     display: flex;
     align-items: center;

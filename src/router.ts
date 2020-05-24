@@ -20,10 +20,6 @@ export default new Router({
       component: Jobs,
     },
     {
-      path: '/diplomas/',
-      component: Diplomas,
-    },
-    {
       path: '/projects/',
       component: Projects,
     },

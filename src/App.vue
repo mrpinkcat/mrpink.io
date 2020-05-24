@@ -18,34 +18,38 @@ export default class Main extends Vue {
   @Prop() private navInfo: any = {
     routerLinksNav : [
       {
-        displayName : 'Jobs',
-        path : 'jobs',
+        displayName: 'Jobs',
+        path: 'jobs',
       },
       {
-        displayName : 'Projects',
-        path : 'projects',
+        displayName: 'Projets',
+        path: 'projects',
       },
       {
-        displayName : 'Diplomas',
-        path : 'diplomas',
+        displayName: 'Formation',
+        path: 'school',
       },
       {
-        displayName : 'Contacts',
-        path : 'contacts',
+        displayName: 'Veille',
+        path: 'veille',
+      },
+      {
+        displayName: 'Contacts',
+        path: 'contacts',
       },
     ],
     routerLinksExt : [
       {
-        icon : 'fa-linkedin',
-        url : 'https://www.linkedin.com/in/anizan-g/',
+        icon: 'fa-linkedin',
+        url: 'https://www.linkedin.com/in/anizan-g/',
       },
       {
-        icon : 'fa-github-alt',
-        url : 'https://github.com/mrpinkcat',
+        icon: 'fa-github-alt',
+        url: 'https://github.com/mrpinkcat',
       },
       {
-        icon : 'fa-instagram',
-        url : 'https://www.instagram.com/gatien.anizan/',
+        icon: 'fa-instagram',
+        url: 'https://www.instagram.com/gatien.anizan/',
       },
     ],
   };

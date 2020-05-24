@@ -4,6 +4,8 @@ import router from './router';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 
+import './sass/mrpink.dev.scss';
+
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
 

@@ -2,11 +2,11 @@
   <div class="job-card">
     <img v-if='job.image' :src='job.image' alt="job.image">
     <div class="job-info">
-      <h2 class="title">{{job.title}}</h2><span> at </span>
+      <h2 class="title">{{job.title}}</h2><span> chez </span>
         <h2 class="company"><a class="link" target="_blank" :href='job.companyWebsite'>{{job.company}}</a></h2>
-      <p><b>{{job.workDate}}</b> on <b>{{job.contractType}}</b></p>
+      <p><b>{{job.workDate}}</b> en <b>{{job.contractType}}</b></p>
     </div>
-    <h3>Activities :</h3>
+    <h3>Activités :</h3>
     <ul class="job-activities">
       <li v-for='activity in job.activities' :key="activity">{{activity}}</li>
     </ul>
@@ -30,10 +30,10 @@ export default class JobCard extends Vue {
   box-shadow: rgb(200, 200, 200) 2px 2px 5px;
   margin: auto;
   margin-bottom: 8px;
-  border-radius: 6px;
-  background: $grey-light;
+  background: white;
   padding: 1em 1em 0.5em 1em;
-  width: 80%;
+  width: 100%;
+  box-sizing: border-box;
   @include sm {
     width: calc(100% - (8px * 2) - 1em);
   }
