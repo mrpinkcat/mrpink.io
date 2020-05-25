@@ -5,6 +5,7 @@ import Jobs from './views/Jobs.vue';
 import School from './views/School.vue';
 import Projects from './views/Projects.vue';
 import Contacts from './views/Contacts.vue';
+import Veille from './views/Veille.vue';
 
 Vue.use(Router);
 
@@ -26,6 +27,10 @@ export default new Router({
     {
       path: '/school/',
       component: School,
+    },
+    {
+      path: '/veille/',
+      component: Veille,
     },
     {
       path: '/contacts/',
