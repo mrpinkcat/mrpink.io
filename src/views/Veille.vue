@@ -23,7 +23,7 @@
   <div class="images">
     <img src="./../assets/screen-veille-3.png">
   </div>
-  <p>Pour la veille juridique j'utilise Google News. C'est un basique mais qui me suffit, toutes les info sont aussi centralisées.</p>
+  <p>Pour la veille juridique j'utilise Google News. C'est un basique mais ça me suffit, toutes les info sont aussi centralisées.</p>
   <h3>Centres d'intérêts :</h3>
   <ul>
     <li>Protection des données</li>
