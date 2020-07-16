@@ -1,47 +1,36 @@
 {
-  "name": "mrpink.io",
+  "name": "mrpink.dev",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "commitizen": "^2.10.1",
-    "vue": "^2.5.16",
-    "vue-axios": "^2.1.2",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
-    "vue-router": "^3.0.1"
+    "@fullpage/react-fullpage": "^0.1.17",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
-    "@vue/cli-plugin-typescript": "^3.0.0-rc.5",
-    "@vue/cli-service": "^3.0.0-rc.5",
-    "cz-conventional-changelog": "^2.1.0",
-    "lint-staged": "^6.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
+  "resolutions": {
+    "styled-components": "^5"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
-  "lint-staged": {
-    "*.ts": [
-      "vue-cli-service lint",
-      "git add"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
