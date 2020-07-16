@@ -65,7 +65,7 @@ const FirstSection = () => {
       <Container>
         <Title>Gatien Anizan</Title>
           <Image src={meImage} alt="Me" />
-          <Text>Je suis Gatien, un développeur passionné par les technologies. Je cultive un esprit curieux en le remplissant de problème chaque jour. Je suis fièrement diplomé d'un BTS SIO. Mes deux ans de formation d'aprenti ont été faites au seins de l'équipe <CustomLink href="https://kwalys.com" target="_blank" rel="noopener noreferrer">Kwalys</CustomLink>, startup de création de chatbot.</Text>
+          <Text>Je suis Gatien, un développeur passionné par les technologies. Je cultive un esprit curieux en le remplissant de problème chaque jour. Je suis fièrement diplômé d'un BTS SIO. Mes deux ans de formation d'apprenti ont été faites au sein de l'équipe <CustomLink href="https://kwalys.com" target="_blank" rel="noopener noreferrer">Kwalys</CustomLink>, startup de création de chatbot.</Text>
           <SocialLinkContainer>
             <SocialLink href="https://github.com/mrpinkcat" target="_blank" rel="noopener noreferrer" ><GithubLogo color="#FFF" size="30px" /></SocialLink>
             <SocialLink href="https://www.linkedin.com/in/anizan-g/" target="_blank" rel="noopener noreferrer" ><LinkedInLogo color="#FFF" size="30px" /></SocialLink>
