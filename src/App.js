@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactFullPage from '@fullpage/react-fullpage';
 import FirstSection from './components/FirstSection';
+import SecondSection from './components/SecondSection';
 
 
 export default () => {
@@ -13,7 +14,8 @@ export default () => {
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullPage.Wrapper>
-            <FirstSection />
+            <FirstSection fullpageApi={fullpageApi} />
+            <SecondSection />
           </ReactFullPage.Wrapper>
         );
       }}

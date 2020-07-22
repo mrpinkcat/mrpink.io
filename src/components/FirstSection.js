@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserView,
+  MobileView,
+} from "react-device-detect";
 
 import meImage from './../assets/me.jpg';
 
 import GithubLogo from './../components/svgs/GithubLogo';
 import LinkedInLogo from './../components/svgs/LinkedInLogo';
 import MailLogo from './../components/svgs/MailLogo';
+import ScrollButton  from './../components/ScrollButton';
 
 const Container = styled.div`
   display: flex;
@@ -59,7 +64,9 @@ const SocialLink = styled.a`
   margin: 0 8px;
 `;
 
-const FirstSection = () => {
+const FirstSection = (props) => {
+  const fullpageApi = props.fullpageApi;
+
   return (
     <div className="section">
       <Container>
@@ -72,6 +79,12 @@ const FirstSection = () => {
             <SocialLink href="mailto://gatien.anizan@gmail.com"><MailLogo color="#FFF" size="30px" /></SocialLink>
           </SocialLinkContainer>
       </Container>
+      <BrowserView>
+        <ScrollButton onClick={(e) => {fullpageApi.moveSectionDown()}} text="Prochaine partie" />
+      </BrowserView>
+      <MobileView>
+        <h1>small screen</h1>
+      </MobileView>
     </div>
   )
 }
