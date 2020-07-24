@@ -8,14 +8,14 @@ export default () => {
   return (
     <ReactFullPage
       navigation
-      navigationTooltips={[undefined]}
-      anchors={['']}
-      sectionsColor={['#111111']}
+      navigationTooltips={[undefined, 'Le commencement']}
+      anchors={['', 'start']}
+      sectionsColor={['#111111', '#222222']}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullPage.Wrapper>
             <FirstSection fullpageApi={fullpageApi} />
-            <SecondSection />
+            {/* <SecondSection fullpageApi={fullpageApi} /> */}
           </ReactFullPage.Wrapper>
         );
       }}
