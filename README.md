@@ -14,4 +14,8 @@ Builds de l'app pour la production dans le dossier `build`.
 
 ## Déploiement
 
-Application déployé sur [https://mrpink.dev](https://mrpink.dev) via l'outil [netlify](https://www.netlify.com/).
+Application déployée sur [https://mrpink.dev](https://mrpink.dev) via l'outil [netlify](https://www.netlify.com/).
+
+## /!\ Disclamer
+
+Je suis conscient qu'un projet de ce type ne nécecite absolument pas de framework comme react.
